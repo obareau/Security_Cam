@@ -1,2 +1,2 @@
 # Security_Cam
-Smart security Cam (works on Raspoberry too) from ZENVA COURSES
+Smart security Cam (works on Raspberry too) from ZENVA COURSES
