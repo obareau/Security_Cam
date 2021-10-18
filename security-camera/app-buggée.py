@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import cv2
 from skimage.measure import compare_ssim
-from twilio.rest import Client
-from twilio_creds import ACCOUNT_SID, AUTH_TOKEN, TWILIO_PHONE
+# from twilio.rest import Client
+# from twilio_creds import ACCOUNT_SID, AUTH_TOKEN, TWILIO_PHONE
 from phone_number import PHONE_NUMBER
 
 def ssim(A, B):
@@ -41,9 +41,9 @@ while True:
         ssim_index = ssim(current_frame, previous_frame)
         if ssim_index < 0.90 and is_first_message:
             # send text message using Twilio
-            client.messages.create(body='Intruder Alert!', from_=TWILIO_PHONE, to=PHONE_NUMBER)
-            print('Intruder Alert!')
-            is_first_message = False
+            # client.messages.create(body='Intruder Alert!', from_=TWILIO_PHONE, to=PHONE_NUMBER)
+            # print('Intruder Alert!')
+            # is_first_message = False
 
         # updating previous frame
         previous_frame = current_frame
